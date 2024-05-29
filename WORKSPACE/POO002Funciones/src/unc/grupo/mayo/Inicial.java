@@ -37,11 +37,8 @@ public class Inicial {
 		for(int a = 0; a < 5; a=a+1) {
 			System.out.println("Ingrese hasta donde quiere sumar");
 			int n = teclado.nextInt();
-			int suma = 0;
-			for(int i = 0; i<= n; i=i+1) {
-				suma = suma + i;
-			}
-			System.out.println("La suma de los "+ n + " numeros  es " + suma);
+			int respuestaSuma = sumaNNumeros(n); 
+			System.out.println("La suma de los "+ n + " numeros  es " + respuestaSuma);
 		}
 		System.out.println("Termino!!!");
 	}
