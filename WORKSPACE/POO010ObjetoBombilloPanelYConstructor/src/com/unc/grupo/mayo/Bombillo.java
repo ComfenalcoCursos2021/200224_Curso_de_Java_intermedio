@@ -11,23 +11,45 @@ public class Bombillo {
 	private float alto;
 	private float profundo;
 	
-	
-	public Bombillo (float altoValor, float anchoValor, float profundoValor) {
+	/**
+	 * Este constructor inicializa todos los valores del bombillo, para que este este funcional desde el principio
+	 * @param altoValor Esta variable lleva el valor de la dimension del alto
+	 * @param anchoValor Esta variable lleva el valor de la dimension del ancho
+	 * @param profundoValor Esta variable lleva el valor de la dimension de la profundidad
+	 * @param tipoValor Esta variable lleva el valor del tipo; tales como  "LED" "Incandecente" "alogeno"
+	 * @param colorValor Esta variable lleva el valor del color
+	 * @param lumensValor Esta variable lleva el valor de la intensidad luminica
+	 */
+	public Bombillo (float altoValor, float anchoValor, float profundoValor, String tipoValor, String colorValor, float lumensValor ) {
 		System.out.println("******************el constructor");
 		
-		this.alto = altoValor;
-		this.ancho = anchoValor;
-		this.profundo = profundoValor;
+		// this.alto = altoValor;
+		// this.ancho = anchoValor;
+		// this.profundo = profundoValor;
+		
+		this.setAlto(altoValor);
+		this.setAncho(anchoValor);
+		this.setProfundo(profundoValor);
+		this.setTipo(tipoValor);
+		this.setColor(colorValor);
+		this.setLumens(lumensValor);
+		this.apagar();
 	}
 	
-	
+	/**
+	 * Este comportamiento cambia una propiedad interna para almacenar y controlar el estado
+	 * actual del bombillo, podra ser consultada por medio del metodo estaEncendido()
+	 */
 	public void encender() {
 		this.encendido = true;
 	}
 	public void apagar() {
 		this.encendido = false;
 	}
-	
+	/**
+	 * Esta funcion retorna en una cadena SI/NO  si esta encendido el bombillo
+	 * @return estado actual del bombillo
+	 */
 	public String estaEncendido() {
 		if(this.encendido) {
 			return "SI";
@@ -44,19 +66,19 @@ public class Bombillo {
 	public float getLumens() {
 		return lumens;
 	}
-	public void setLumens(float lumens) {
+	private void setLumens(float lumens) {
 		this.lumens = lumens;
 	}
 	public String getColor() {
 		return color;
 	}
-	public void setColor(String color) {
+	private void setColor(String color) {
 		this.color = color;
 	}
 	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(String tipo) {
+	private void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 	public float getAncho() {

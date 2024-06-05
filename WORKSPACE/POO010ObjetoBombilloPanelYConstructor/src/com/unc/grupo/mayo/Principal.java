@@ -5,14 +5,8 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
-		Bombillo sala = new Bombillo(10,5,5);
-		
-		sala.setAlto(10);
-		sala.setAncho(5);
-		sala.setProfundo(5);
-		sala.setColor("Azul");
-		sala.setLumens(15000);
-		sala.setTipo("Led");
+		Bombillo sala = new Bombillo(10,5,5,"Led","Azul",15000);	
+			
 		
 		Scanner teclado = new Scanner(System.in);
 		int opcion = -1;
@@ -28,6 +22,7 @@ public class Principal {
 				System.out.println("¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-¡-");
 				System.out.println("Estado actual del bombillo");
 				System.out.println("\t\tEncendido\t" + sala.estaEncendido() + "\n");
+				
 				System.out.println("-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!");
 			} else {
 				System.out.println("+______________________________________________");
@@ -35,7 +30,7 @@ public class Principal {
 				System.out.println("|\t\tEncendido\t" + sala.estaEncendido() + "\n");
 				System.out.println("+______________________________________________");	
 			}
-			
+			System.out.println("Dimensiones Alto " + sala.getAlto() + "  Ancho " + sala.getAncho() + "   profundidad " + sala.getProfundo());
 			
 			
 			System.out.println("Que desea hacer?");
@@ -46,7 +41,7 @@ public class Principal {
 			
 			if(opcion == 1) {
 				sala.encender();
-				sala.setAlto(20);
+				
 			}
 			
 			if(opcion == 2) {
