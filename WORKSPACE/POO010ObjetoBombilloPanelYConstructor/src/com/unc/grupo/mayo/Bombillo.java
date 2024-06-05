@@ -62,7 +62,7 @@ public class Bombillo {
 	public float getAncho() {
 		return ancho;
 	}
-	public void setAncho(float ancho) {
+	private void setAncho(float ancho) {
 		this.ancho = ancho;
 	}
 	
@@ -75,7 +75,7 @@ public class Bombillo {
 	public float getProfundo() {
 		return profundo;
 	}
-	public void setProfundo(float profundo) {
+	private void setProfundo(float profundo) {
 		this.profundo = profundo;
 	}
 	
