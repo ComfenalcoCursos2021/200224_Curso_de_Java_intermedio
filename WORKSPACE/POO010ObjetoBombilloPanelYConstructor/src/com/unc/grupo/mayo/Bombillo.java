@@ -69,7 +69,7 @@ public class Bombillo {
 	public float getAlto() {
 		return alto;
 	}
-	public void setAlto(float alto) {
+	private void setAlto(float alto) {
 		this.alto = alto;
 	}
 	public float getProfundo() {
