@@ -8,6 +8,8 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaAgregar extends JDialog {
 
@@ -35,6 +37,10 @@ public class VentanaAgregar extends JDialog {
 		getContentPane().setLayout(null);
 		
 		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnAgregar.setBounds(120, 141, 89, 23);
 		getContentPane().add(btnAgregar);
 		
