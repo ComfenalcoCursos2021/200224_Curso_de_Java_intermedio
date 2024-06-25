@@ -1,27 +1,31 @@
 package com.unc.poo;
 
+import com.unc.poo.interfaces.IConn;
+
 public class MenejadorConexion {
 
 	//private MySQLConn conexion = new MySQLConn();
 	//private SQLServerConn conexion = new SQLServerConn();
-	private Conn conexion;
+	private IConn conexion;
 	
-	public MenejadorConexion(int tipo) {
+	public MenejadorConexion(String motor) {
 		
-		if(tipo == 1) {
+		
+		if("MYSQL".equals(motor)) {
 			this.conexion = new MySQLConn();
 		}
-		if(tipo == 2) {
+		if("SQLSERVER".equals(motor)) {
 			this.conexion = new SQLServerConn();
 		}
-		if(tipo == 3) {
+		if("POSTGRE".equals(motor)) {
 			this.conexion = new PostgreSQLConn();
 		}
+		
 	}
 	
 	public void conectar() {
-		String user = this.conexion.getUser();
-		
+		String usuario = ((Conn)this.conexion).getUser();
+		System.out.println("USANDO EL USUARIO " + usuario + " para la conexion");
 		this.conexion.conectar();
 	}
 	
