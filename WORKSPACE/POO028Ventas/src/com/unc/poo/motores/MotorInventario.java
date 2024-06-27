@@ -63,6 +63,21 @@ public class MotorInventario {
 		return buscado;
 	}
 	
+	public List<Inventario> buscarMultiple(String palabra) {
+		List<Inventario> buscados = new ArrayList<Inventario>();
+		for (int i = 0; i < inventariosProductos.size(); i++) {
+			
+			String nombreSimpleProductoEnInventario = inventariosProductos.get(i).getProducto().getNombre();			
+			nombreSimpleProductoEnInventario = nombreSimpleProductoEnInventario.trim().toLowerCase();
+			palabra = palabra.trim().toLowerCase();
+			if(nombreSimpleProductoEnInventario.contains(palabra)) {
+				buscados.add(inventariosProductos.get(i));				
+			}			
+		}
+		
+		return buscados;
+	}
+	
 	private Inventario buscarInventarioPorProducto(Producto p) {
 		Inventario buscado = null;
 		for (int i = 0; i < inventariosProductos.size(); i++) {
