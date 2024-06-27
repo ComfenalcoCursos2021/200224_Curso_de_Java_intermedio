@@ -14,6 +14,7 @@ public class Principal {
 		MotorInventario motor = new MotorInventario();
 		InterfazUsuarioInventarios iInv = new InterfazUsuarioInventarios(motor);
 		InterfazUsuarioVentas iVentas = new InterfazUsuarioVentas();
+		
 		int opcion=2;
 		System.out.println("BIENVENIDA PRINCIPAL");
 		System.out.println("1. Inventarios");
